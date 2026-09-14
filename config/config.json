@@ -1,0 +1,131 @@
+{
+    "archivos": {
+        "log": "logs/registro_sistema.log"
+    },
+
+    "simulador": {
+        "temperatura_minima": 10,
+        "temperatura_maxima": 37,
+
+        "humedad_minima": 50,
+        "humedad_maxima": 70,
+
+        "luz_minima": 500,
+        "luz_maxima": 2500,
+
+        "gas_minimo": 700,
+        "gas_maximo": 1023,
+
+        "pitch_minimo": -20,
+        "pitch_maximo": 20,
+
+        "roll_minimo": -20,
+        "roll_maximo": 20,
+
+        "distancia_frontal_minima": 100,
+        "distancia_frontal_maxima": 500,
+
+        "probabilidad_desconexion": 5,
+        "probabilidad_anomalia_simple": 10,
+        "probabilidad_anomalia_compleja": 5,
+        "probabilidad_caida": 3
+    },
+
+    "temperatura": {
+        "minimo": 0,
+        "maximo": 50,
+        "umbral_bajo": 10,
+        "umbral_alto": 38,
+        "umbral_cambio_brusco": 10
+    },
+
+    "humedad": {
+        "minimo": 20,
+        "maximo": 90,
+        "umbral_bajo": 30,
+        "umbral_alto": 80
+    },
+
+    "luz": {
+        "minimo": 0,
+        "maximo": 4095,
+        "umbral_bajo": 300,
+        "umbral_alto": 2500
+    },
+
+    "gas": {
+        "minimo": 0,
+        "maximo": 1023,
+        "umbral_detectado": 800,
+        "umbral_elevado": 500,
+        "umbral_cambio_brusco": 200
+    },
+
+    "bateria": {
+        "minimo": 0,
+        "maximo": 100,
+        "baja": 20,
+        "critica": 10,
+        "descarga_brusca": 8
+    },
+
+    "corriente": {
+        "minimo": 0,
+        "maximo": 100,
+        "umbral_alto": 12,
+        "umbral_critico": 25,
+        "umbral_cambio_brusco": 12
+    },
+
+    "pitch": {
+        "minimo": -90,
+        "maximo": 90,
+        "umbral_aviso": 30,
+        "umbral_critico": 60,
+        "umbral_extremo": 85,
+        "umbral_cambio_brusco": 25
+    },
+
+    "roll": {
+        "minimo": -90,
+        "maximo": 90,
+        "umbral_aviso": 30,
+        "umbral_critico": 60,
+        "umbral_extremo": 85,
+        "umbral_cambio_brusco": 25
+    },
+
+    "distancia_frontal": {
+        "minimo": 10,
+        "maximo": 1200,
+        "umbral_cercano": 100,
+        "umbral_muy_cercano": 50,
+        "umbral_cambio_brusco": 100
+    },
+
+    "tiempo": {
+        "espera_entre_muestras": 60
+    },
+
+    "dashboard": {
+        "max_filas": 9,
+        "max_historial": 40,
+        "rango_consulta": "-30m",
+        "actualizacion_ms": 5000
+    },
+
+    "mqtt": {
+        "broker": "localhost",
+        "puerto": 1883,
+        "tema_sensores": "robot/sensores"
+    },
+
+    "influxdb": {
+        "url": "http://localhost:8086",
+        "org": "tfg",
+        "bucket": "monitorizacion_robot",
+        "measurement_telemetria": "telemetria_robot",
+        "measurement_eventos": "eventos_robot",
+        "token": "TU_TOKEN_INFLUXDB"
+    }
+}
